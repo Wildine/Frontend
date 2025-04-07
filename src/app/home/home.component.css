@@ -1,0 +1,136 @@
+main {
+  width: 100%;
+  /* border: 1px solid #000; */
+  /* background-color: #F5F5F5; */
+}
+
+.img {
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.content-text {
+  color: #fff;
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px 40px;
+  border-radius: 10px;
+  transform: translate(-50%,10%);
+  box-shadow: 5px 5px 15px #fff;
+  text-shadow: 5px 5px 15px #000;
+}
+
+.content-text h2 {
+  font-size: 36px;
+}
+
+.content-text p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.content-text button {
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 25px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #2C3E50;
+  text-shadow: 5px 5px 15px #000;
+  box-shadow: 5px 5px 15px #000;
+}
+
+.content-text button:hover {
+  cursor: pointer;
+  background-color: #3498DB;
+  transition: background-color .6s ease-in-out;
+}
+
+.content-text button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content-text button i {
+  margin-left: 5px;
+}
+
+/* Section objectif  */
+#objectif {
+  margin: 100px 0;
+  padding: 50px 0;
+  /* border: 1px solid #000; */
+}
+
+#objectif .h2 {
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000;
+}
+
+.objectif-container {
+  padding: 10px 20px;
+  /* border: 1px solid #000; */
+}
+
+.objectif-container .card {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  color: #2C3E50;
+  margin: 30px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #ECF0F1;
+  /* box-shadow: 5px 5px 15px #000; */
+}
+
+.objectif-container .card:hover {
+  box-shadow: 5px 5px 15px #000;
+  transition: box-shadow .4s ease-in-out;
+}
+
+.objectif-container .card i {
+  margin-left: 10px;
+}
+
+.objectif-container .card h2 {
+  font-size: 24px;
+}
+
+.objectif-container .card p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.objectif-container .card .date {
+  font-size: 14px;
+}
+
+.objectif-container .card button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: #3498DB;
+}
+
+.objectif-container .card button a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.objectif-container .card button:hover {
+  cursor: pointer;
+  background-color: #276b99;
+  transition: background-color .5s ease-in-out;
+}

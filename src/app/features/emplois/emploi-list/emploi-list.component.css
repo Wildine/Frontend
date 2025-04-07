@@ -1,0 +1,103 @@
+/* Section pour les offres (card) */
+#card {
+  margin: 100px 0;
+  /* padding: 100px 0; */
+  /* border: 1px solid #000; */
+}
+
+#card .offre {
+  display: flex;
+  margin: 10px 0 0 0;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: space-between;
+  /* text-shadow: 2px 2px 3px #000; */
+}
+
+#card .offre h2 {
+  font-size: 36px;
+  /* margin: 10px 0 0 0;
+  border: 1px solid #000; */
+}
+
+#card .offre span {
+  font-size: 24px;
+  /* border: 1px solid #000; */
+}
+
+.card-container {
+  padding: 10px 20px;
+  /* border: 1px solid #000; */
+}
+
+.card-container .card {
+  /* width: 400px; */
+  padding: 20px;
+  text-align: center;
+  color: #2C3E50;
+  margin: 30px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  /* border: 1px solid #000; */
+  border: 1px solid #ECF0F1;
+  /* box-shadow: 5px 5px 15px #000; */
+}
+
+.card-container .card:hover {
+  box-shadow: 5px 5px 15px #000;
+  transition: box-shadow .4s ease-in-out;
+}
+
+.card-container .card h2 {
+  font-size: 30px;
+  margin: 10px 0;
+  padding: 2px 0;
+  border: 1px solid #f4f4ff;
+}
+
+.card-container .card .img {
+  width: 100%;
+}
+
+.card-container .card .img img {
+  width: 100%;
+}
+
+.card-container .card p {
+  font-size: 20px;
+  margin: 10px 0;
+  padding: 10px 0;
+  border: 1px solid #f4f4ff;
+  /* text-shadow: 2px 2px 4px #000; */
+}
+
+.card-container .card .date {
+  font-size: 14px;
+}
+
+.card-container .card .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container .card button {
+  width: 100%;
+  border: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #3498DB;
+}
+
+.card-container .card button a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.card-container .card button:hover {
+  cursor: pointer;
+  background-color: #276b99;
+  transition: background-color .5s ease-in-out;
+}

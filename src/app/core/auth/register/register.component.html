@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="content-container">
+    <div class="form-container">
+      <div class="img-container">
+        <div class="welcome">
+          <h2>Bienvenue sur notre plateforme</h2>
+          <p>Merci de vous inscrire afin de profiter pleinement de nos services.</p>
+        </div>
+      </div>
+
+      <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+        <div class="form-group">
+          <h2>S'inscrire <i class="fa-solid fa-right-to-bracket"></i></h2>
+
+          <div class="input">
+            <select [(ngModel)]="selectedRole" name="role" required>
+              <option value="" disabled selected>Sélectionnez votre profil</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="etudiant">Étudiant</option>
+              <option value="demandeur">Chercheur d'emploi</option>
+            </select>
+            <i class="fas fa-user-tie"></i>
+          </div>
+
+          <!-- Étudiant -->
+          <div *ngIf="selectedRole === 'etudiant'">
+            <div class="input">
+              <input type="text" placeholder="Prénom" [(ngModel)]="user.prenom" name="prenom" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="Nom" [(ngModel)]="user.nom" name="nom" required />
+              <i class="fas fa-user-tag"></i>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="Université" [(ngModel)]="user.universite" name="universite" required />
+              <i class="fas fa-university"></i>
+            </div>
+          </div>
+
+          <!-- Entreprise -->
+          <div *ngIf="selectedRole === 'entreprise'">
+            <div class="input">
+              <input type="text" placeholder="Nom de l'entreprise" [(ngModel)]="user.nomEntreprise" name="nomEntreprise" required />
+              <i class="fas fa-building"></i>
+            </div>
+          </div>
+
+          <!-- Demandeur -->
+          <div *ngIf="selectedRole === 'demandeur'">
+            <div class="input">
+              <input type="text" placeholder="Prénom" [(ngModel)]="user.prenom" name="prenom" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="Nom" [(ngModel)]="user.nom" name="nom" required />
+              <i class="fas fa-user-tag"></i>
+            </div>
+          </div>
+
+          <!-- Encadrant -->
+          <div *ngIf="selectedRole === 'encadrant'">
+            <div class="input">
+              <input type="text" placeholder="Prénom" [(ngModel)]="user.prenom" name="prenom" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="Nom" [(ngModel)]="user.nom" name="nom" required />
+              <i class="fas fa-user-tag"></i>
+            </div>
+          </div>
+
+          <!-- Champs communs -->
+          <div class="input">
+            <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" required />
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="input">
+            <input type="password" placeholder="Mot de passe" [(ngModel)]="user.password" name="password" required />
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="input">
+            <input type="password" placeholder="Confirmer le mot de passe" [(ngModel)]="user.confirmPassword" name="confirmPassword" required />
+            <i class="fas fa-lock"></i>
+          </div>
+
+          <div class="btn">
+            <button type="submit">S'inscrire <i class="fa-solid fa-right-to-bracket"></i></button>
+          </div>
+        </div>
+        <p class="login">Vous avez déjà un compte ? <a routerLink="/login">Connectez-vous</a></p>
+      </form>
+    </div>
+  </div>
+</div>

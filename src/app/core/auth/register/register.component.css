@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  width: 90%;
+  display: flex;
+  background: url("/assets/lancelot.png") no-repeat center/cover;
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  /* border: 1px solid red; */
+}
+
+.form-container .img-container {
+  width: 100%;
+  display: flex;
+}
+
+.form-container .img-container .welcome {
+  width: 40%;
+  padding: 20px;
+  position: absolute;
+  /* border: 1px solid #fff; */
+}
+
+.img-container .welcome h2 {
+  color: #fff;
+}
+
+.img-container .welcome p {
+  color: #6a12cf;
+  font-size: 20px;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.form-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.form-container form {
+  width: 60%;
+  padding: 50px;
+  border-radius: 8px;
+  background-color: #fff;
+  /* background-color: #f8f8f8; */
+}
+
+.form-container form .login {
+  margin: 10px 0;
+  font-size: 18px;
+  /* border: 1px solid #000; */
+}
+
+/* .form-group {
+  border: 1px solid #000;
+} */
+
+form .form-group h2 {
+  display: flex;
+  font-size: 30px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group h2 i {
+  padding-left: 10px;
+}
+
+.form-group .input {
+  position: relative;
+}
+
+.form-group .input i {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+}
+
+.form-group .input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin: 5px 0;
+  font-size: 16px;
+  border: 1px solid #dad4d4;
+  padding: 10px 40px 10px 10px;
+}
+
+.form-group input:focus {
+  outline: 0;
+  border-color: #86b7fe;
+  box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group .input select {
+  width: 100%;
+  outline: none;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #dad4d4;
+}
+
+.form-group .input select option {
+  font-size: 16px;
+  text-align: center;
+}
+
+.form-group select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
+  outline: 0;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* .form-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.form-group .btn button {
+  color: #fff;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 8px 0;
+  background-color: #0118D8;
+}
+
+.form-group .btn button i {
+  padding-left: 10px;
+}
+
+form .login a {
+  margin-left: 10px;
+  text-decoration: none;
+}
