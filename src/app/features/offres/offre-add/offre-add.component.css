@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f0f0f0; */
+}
+
+.content-container {
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 16px #f3f3f3;
+}
+
+/* form {
+  border: 1px solid yellow;
+} */
+
+.form-group {
+  margin: 18px 0;
+  position: relative;
+}
+
+.form-group input, select, textarea {
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid #f8f8f8;
+  padding: 10px 40px 10px 10px;
+}
+
+.form-group i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.form-group select option {
+  text-align: center;
+}
+
+.form-group input:focus {
+  outline: 0;
+  border-color: #86b7fe;
+  box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group .input select option {
+  /* font-size: 16px; */
+  text-align: center;
+}
+
+.form-group textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-size: 18px;
+  border: 1px solid #f8f8f8;
+}
+
+.form-group textarea:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group p {
+  font-size: 20px;
+  padding-bottom: 10px;
+  /* border: 1px solid #000; */
+}
+
+.form-group select:focus {
+  outline: 0;
+  border-color: #86b7fe;
+  box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form button {
+  display: flex;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  background-color: #0077b6;
+}
+
+form button:hover {
+  background-color: #005f87;
+  transition: background-color 0.3s ease-in-out;
+}
+
+form button i {
+  padding-right: 10px;
+}

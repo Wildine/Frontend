@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="titre">
+    <h2>
+      <i class="fa-solid fa-user-check" style="color:#343A40;"></i>Gestion des candidatures
+    </h2>
+    <p>
+      Suivez et gérez toutes les candidatures reçues pour vos offres. Filtrez, évaluez et exportez les données selon vos besoins.
+    </p>
+  </div>
+
+  <div class="content-container">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fa-solid fa-list" style="color:#007BFF;"></i>Liste des candidatures
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>Consultez toutes les candidatures reçues, triées par offre et par date de soumission.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" routerLink="/entreprise-dashboard/gestion-candidatures">
+          <i class="fa-solid fa-magnifying-glass"></i>Voir les candidatures
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fa-solid fa-hourglass-half" style="color:#ffc107;"></i>En attente
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>Gérez les candidatures en cours de traitement et prenez des décisions rapidement.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" routerLink="/entreprise-dashboard/candidatures-attente">
+          <i class="fa-solid fa-clock"></i>Candidatures en attente
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fa-solid fa-check-double" style="color:#28a745;"></i>Acceptées / Rejetées
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>Consultez l’historique des candidatures acceptées ou rejetées, et gérez les statuts.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" routerLink="/entreprise-dashboard/candidatures-traitees">
+          <i class="fa-solid fa-folder-open"></i>Historique
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fa-solid fa-chart-line" style="color:#17A2B8;"></i>Statistiques
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>Visualisez les données clés sur les candidatures : nombre, évolution, taux de réponse, etc.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-info" routerLink="/entreprise-dashboard/statistiques-candidatures">
+          <i class="fa-solid fa-chart-pie"></i>Voir les stats
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <i class="fa-solid fa-file-export" style="color:#6f42c1;"></i>Export des candidatures
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>Générez un fichier Excel/CSV de toutes les candidatures pour analyse ou archivage.</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" routerLink="/entreprise-dashboard/export-candidatures">
+          <i class="fa-solid fa-download"></i>Exporter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

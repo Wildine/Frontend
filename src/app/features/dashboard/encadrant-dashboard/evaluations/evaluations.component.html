@@ -1,0 +1,27 @@
+<div class="evaluations-container">
+  <div class="header">
+    <h2><i class="fa-solid fa-star-half-stroke" style="color:#343A40;"></i> Évaluations des stagiaires</h2>
+    <p>Consultez ou remplissez les fiches d’évaluation pour les étudiants encadrés.</p>
+  </div>
+
+  <div class="filter-bar">
+    <input type="text" placeholder="Filtrer par nom d'étudiant..." class="search-input">
+    <select class="status-filter">
+      <option value="">Tous les statuts</option>
+      <option value="non-remplie">Non remplie</option>
+      <option value="en-cours">En cours</option>
+      <option value="soumise">Soumise</option>
+    </select>
+    <button routerLink="/encadrant-dashboard/faire-evaluation" style="padding: 10px; cursor:pointer">Faire une evaluation</button>
+  </div>
+
+  <div class="evaluation-list">
+    <div class="evaluation-card" *ngFor="let eval of evaluations">
+      <h4>Stagiaire : {{ eval.stagiaire.email }}</h4>
+      <p><strong>Status :</strong> En cours</p>
+      <p><strong>Date :</strong> {{ eval.date_evaluation | date }}</p>
+      <p><strong>Note :</strong> {{ eval.note }}/20</p>
+      <button class="btn btn-primary">Remplir / Modifier</button>
+    </div>
+  </div>
+</div>

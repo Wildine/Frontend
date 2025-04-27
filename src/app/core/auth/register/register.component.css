@@ -3,24 +3,29 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #00416A, #007BFF);
+  /* background: url("/assets/lancelot.png") no-repeat center/cover; */
 }
 
 .content-container {
-  width: 90%;
+  width: 100%;
   display: flex;
-  background: url("/assets/lancelot.png") no-repeat center/cover;
+  /* background: url("/assets/lancelot.png") no-repeat center/cover; */
 }
 
 .form-container {
   display: flex;
   width: 100%;
   margin: 20px;
+  flex-direction: row;
   /* border: 1px solid red; */
 }
 
 .form-container .img-container {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .form-container .img-container .welcome {
@@ -35,10 +40,11 @@
 }
 
 .img-container .welcome p {
-  color: #6a12cf;
   font-size: 20px;
-  font-style: italic;
   margin: 10px 0;
+  font-style: italic;
+  color: #CCCCCC;
+  /* color: #6a12cf; */
 }
 
 .form-container img {
@@ -47,11 +53,13 @@
 }
 
 .form-container form {
-  width: 60%;
+  width: 100%;
   padding: 50px;
+  max-width: 500px;
   border-radius: 8px;
   background-color: #fff;
   /* background-color: #f8f8f8; */
+  box-shadow: 2px 2px 16px #000;
 }
 
 .form-container form .login {
@@ -92,13 +100,15 @@ form .form-group h2 {
   outline: none;
   margin: 5px 0;
   font-size: 16px;
-  border: 1px solid #dad4d4;
+  border: 1px solid #ccc;
+  /* border: 1px solid #dad4d4; */
   padding: 10px 40px 10px 10px;
 }
 
 .form-group input:focus {
   outline: 0;
-  border-color: #86b7fe;
+  border-color: #007BFF;
+  /* border-color: #86b7fe; */
   box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -108,18 +118,39 @@ form .form-group h2 {
   outline: none;
   margin: 5px 0;
   padding: 10px;
-  border: 1px solid #dad4d4;
+  font-size: 16px;
+  font-style: italic;
+  border: 1px solid #ccc;
+  /* background-color: #f0f0f0; */
+  /* border: 1px solid #dad4d4; */
 }
 
 .form-group .input select option {
-  font-size: 16px;
+  /* font-size: 16px; */
   text-align: center;
 }
 
 .form-group select:focus {
+  outline: 0;
   border-color: #86b7fe;
   box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group .input textarea {
+  width: 100%;
+  outline: none;
+  margin: 5px 0;
+  resize: vertical;
+  font-size: 16px;
+  border: 1px solid #dad4d4;
+  padding: 10px 15px 10px 10px;
+}
+
+.form-group .input textarea:focus {
   outline: 0;
+  border-color: #86b7fe;
+  box-shadow: 0 0 5px 5px rgba(13, 110, 253, 0.2);
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -138,14 +169,113 @@ form .form-group h2 {
   margin: 10px 0;
   font-size: 20px;
   padding: 8px 0;
-  background-color: #0118D8;
+  background-color: #007BFF;
 }
 
 .form-group .btn button i {
   padding-left: 10px;
 }
 
+form .login {
+  text-align: center;
+}
+
 form .login a {
   margin-left: 10px;
+  color: #007BFF;
   text-decoration: none;
+  text-shadow: 2px 2px 4px #007BFF;
 }
+
+
+/* Responsivite */
+@media (max-width: 768px) {
+  /* .form-container {
+    border: 1px solid #000;
+  } */
+
+  .form-container .img-container .welcome {
+    width: 100%;
+    position: static;
+    text-align: center;
+  }
+
+  .form-container form {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .form-group h2 {
+    font-size: 24px;
+  }
+
+  .form-group .input input {
+    font-size: 14px;
+    padding: 8px 30px 8px 10px;
+  }
+
+  .form-group .btn button {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .login {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .form-container .img-container .welcome {
+    width: 100%;
+    position: static;
+  }
+
+  .form-container form {
+    padding: 15px;
+  }
+
+  .form-group .input input {
+    font-size: 14px;
+    padding: 8px 30px 8px 10px;
+  }
+
+  .form-group .btn button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .form-group h2 {
+    font-size: 20px;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .form-container .img-container .welcome {
+    width: 100%;
+    position: static;
+  }
+
+  .form-container form {
+    padding: 15px;
+  }
+
+  .form-group .input input {
+    font-size: 14px;
+    padding: 8px 30px 8px 10px;
+  }
+
+  .form-group .btn button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .form-group h2 {
+    font-size: 20px;
+  }
+} */

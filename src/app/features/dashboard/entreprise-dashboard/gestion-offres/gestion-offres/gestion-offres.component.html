@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="section">
+    <h2><i class="fa-solid fa-briefcase"></i>Gestion des Offres</h2>
+    <button class="btn-ajouter" routerLink="/entreprise-dashboard/ajouter-offre">
+      <i class="fa-solid fa-plus"></i>Nouvelle offre
+    </button>
+
+    <div class="table-container">
+      <table class="entretien-table">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Type</th>
+            <th>Date de publication</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let offre of offres">
+            <td>{{ offre.titre }}</td>
+            <td>{{ offre.type_offre }}</td>
+            <td>{{ offre.date_expiration | date }}</td>
+            <td>
+              <button class="btn-edit" (click)="modifierOffre(offre)">
+                <i class="fa-solid fa-pen-to-square"></i>Modifier
+              </button>
+              <button class="btn-delete" (click)="supprimerOffre(offre.id)">
+                <i class="fa-solid fa-trash"></i>Supprimer
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

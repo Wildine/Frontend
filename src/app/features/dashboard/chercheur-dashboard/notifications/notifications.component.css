@@ -1,0 +1,63 @@
+.container {
+  padding: 20px 30px 0 100px;
+}
+
+.header {
+  background-color: #F8F9FA;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+  font-size: 28px;
+  color: #343A40;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #6C757D;
+}
+
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notification {
+  display: flex;
+  gap: 15px;
+  background-color: #FFFFFF;
+  padding: 15px 20px;
+  border-left: 5px solid #007BFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.notification .icon {
+  font-size: 24px;
+  color: #007BFF;
+}
+
+.notification .content h4 {
+  margin: 0;
+  color: #343A40;
+  font-size: 18px;
+}
+
+.notification .content p {
+  margin: 5px 0;
+  color: #6C757D;
+}
+
+.notification .content span {
+  font-size: 14px;
+  color: #AAAAAA;
+}
+

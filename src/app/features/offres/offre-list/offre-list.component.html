@@ -1,1 +1,140 @@
-<p>offre-list works!</p>
+<div class="offers-container">
+  <h2>Dernières offres d'emploi</h2>
+
+  <swiper-container
+    space-between="40"
+    slides-per-view="3"
+    [breakpoints]="{
+      '0': { slidesPerView: 1 },
+      '640': { slidesPerView: 1 },
+      '768': { slidesPerView: 2 },
+      '1024': { slidesPerView: 3 }
+    }"
+    pagination-clickable="true">
+    <ng-container *ngIf="offres.length > 0">
+      <swiper-slide *ngFor="let offre of offres">
+        <div class="offer-card">
+          <h3>
+            <i class="fa fa-briefcase"></i>{{ offre.type_offre }} - {{ offre.titre }}
+          </h3>
+          <p class="desc">
+            <i class="fa fa-info-circle"></i>{{ offre.description | slice:0:150 }}...
+          </p>
+          <p>
+            <i class="fa fa-map-marker-alt"></i><strong>Lieu :</strong>{{ offre.lieu }}
+          </p>
+          <p>
+            <i class="fa fa-clock"></i><strong>Durée :</strong>{{ offre.duree }}
+          </p>
+          <p>
+            <i class="fa fa-calendar-alt"></i><strong>Expire le :</strong>{{ offre.date_expiration | date }}
+          </p>
+          <div class="btn">
+            <button (click)="postuler(offre)"><i class="fa fa-paper-plane"></i>Postuler</button>
+            <button [routerLink]="['/offres', offre.id]"><i class="fa fa-eye"></i>Détails</button>
+          </div>
+        </div>
+      </swiper-slide>
+    </ng-container>
+
+    <ng-container *ngIf="offres.length === 0">
+      <swiper-slide>
+        <p>Aucune offre disponible actuellement.</p>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+</div>
+
+<div class="offers-container">
+  <h2>Par catégorie</h2>
+
+  <swiper-container
+    space-between="40"
+    slides-per-view="3"
+    [breakpoints]="{
+      '0': { slidesPerView: 1 },
+      '640': { slidesPerView: 1 },
+      '768': { slidesPerView: 2 },
+      '1024': { slidesPerView: 3 }
+    }"
+    pagination-clickable="true">
+    <ng-container *ngIf="offres.length > 0">
+      <swiper-slide *ngFor="let offre of offres">
+        <div class="offer-card">
+          <h3>
+            <i class="fa fa-briefcase"></i>{{ offre.type_offre }} - {{ offre.titre }}
+          </h3>
+          <p class="desc">
+            <i class="fa fa-info-circle"></i>{{ offre.description | slice:0:150 }}...
+          </p>
+          <p>
+            <i class="fa fa-map-marker-alt"></i><strong>Lieu :</strong>{{ offre.lieu }}
+          </p>
+          <p>
+            <i class="fa fa-clock"></i><strong>Durée :</strong>{{ offre.duree }}
+          </p>
+          <p>
+            <i class="fa fa-calendar-alt"></i><strong>Expire le :</strong>{{ offre.date_expiration | date }}
+          </p>
+          <div class="btn">
+            <button (click)="postuler(offre)"><i class="fa fa-paper-plane"></i>Postuler</button>
+            <button [routerLink]="['/offres', offre.id]"><i class="fa fa-eye"></i>Détails</button>
+          </div>
+        </div>
+      </swiper-slide>
+    </ng-container>
+
+    <ng-container *ngIf="offres.length === 0">
+      <swiper-slide>
+        <p>Aucune offre disponible actuellement.</p>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+</div>
+
+<div class="offers-container">
+  <h2>Par région</h2>
+
+  <swiper-container
+    space-between="40"
+    slides-per-view="3"
+    [breakpoints]="{
+      '0': { slidesPerView: 1 },
+      '640': { slidesPerView: 1 },
+      '768': { slidesPerView: 2 },
+      '1024': { slidesPerView: 3 }
+    }"
+    pagination-clickable="true">
+    <ng-container *ngIf="offres.length > 0">
+      <swiper-slide *ngFor="let offre of offres">
+        <div class="offer-card">
+          <h3>
+            <i class="fa fa-briefcase"></i>{{ offre.type_offre }} - {{ offre.titre }}
+          </h3>
+          <p class="desc">
+            <i class="fa fa-info-circle"></i>{{ offre.description | slice:0:150 }}...
+          </p>
+          <p>
+            <i class="fa fa-map-marker-alt"></i><strong>Lieu :</strong>{{ offre.lieu }}
+          </p>
+          <p>
+            <i class="fa fa-clock"></i><strong>Durée :</strong>{{ offre.duree }}
+          </p>
+          <p>
+            <i class="fa fa-calendar-alt"></i><strong>Expire le :</strong>{{ offre.date_expiration | date }}
+          </p>
+          <div class="btn">
+            <button (click)="postuler(offre)"><i class="fa fa-paper-plane"></i>Postuler</button>
+            <button [routerLink]="['/offres', offre.id]"><i class="fa fa-eye"></i>Détails</button>
+          </div>
+        </div>
+      </swiper-slide>
+    </ng-container>
+
+    <ng-container *ngIf="offres.length === 0">
+      <swiper-slide>
+        <p>Aucune offre disponible actuellement.</p>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+</div>

@@ -1,0 +1,61 @@
+.candidature-apply-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apply-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.apply-header h2 {
+  color: #00416A;
+}
+
+.apply-body {
+  text-align: center;
+  padding: 10px;
+}
+
+.offer-details {
+  margin: 10px 0;
+  background-color: #e4e5e6;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.apply-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+
+.login-message {
+  margin-top: 20px;
+  text-align: center;
+  color: #343a40;
+}
+
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

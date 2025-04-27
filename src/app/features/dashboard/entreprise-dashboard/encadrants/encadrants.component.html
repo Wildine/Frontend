@@ -1,0 +1,50 @@
+<div class="encadrants-container">
+  <h2>Gestion des Encadrants</h2>
+
+  <div class="actions-bar">
+    <input type="text" placeholder="Rechercher un encadrant..." class="search-box" />
+    <button class="btn">Ajouter un encadrant</button>
+  </div>
+
+  <table class="encadrants-table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <!-- <th>Spécialité</th> -->
+        <!-- <th>Étudiants</th> -->
+        <th>Statut</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let encadrant of encadrants">
+        <td>{{ encadrant.nom }}</td>
+        <td>{{ encadrant.prenom }}</td>
+        <td>{{ encadrant.email }}</td>
+        <td>{{ encadrant.specialite }}</td>
+        <td>{{ encadrant.etudiants.length }}</td>
+        <td><span class="statut" [class.actif]="encadrant.statut === 'actif'">{{ encadrant.statut | uppercase }}</span></td>
+        <td>
+          <button class="btn-sm">Modifier</button>
+          <button class="btn-sm danger">Désactiver</button>
+          <button class="btn-sm danger">Supprimer</button>
+        </td>
+      </tr>
+      <!-- <tr>
+        <td>Dupont</td>
+        <td>Jean</td>
+        <td>jean.dupont.mail.com</td>
+        <td>Réseaux</td>
+        <td>3</td>
+        <td><span class="statut actif">Actif</span></td>
+        <td>
+          <button class="btn-sm">Modifier</button>
+          <button class="btn-sm danger">Désactiver</button>
+          <button class="btn-sm danger">Supprimer</button>
+        </td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>

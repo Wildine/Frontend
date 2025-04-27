@@ -1,0 +1,19 @@
+<div class="candidature-apply-container">
+  <div class="apply-header">
+    <h2>Postuler à cette offre</h2>
+  </div>
+
+  <div class="apply-body">
+    <p>Vous êtes sur le point de postuler pour l'offre suivante : </p>
+    <div class="offer-details">
+      <p><strong>Offre ID :</strong> {{ offreId }}</p>
+    </div>
+
+    <button class="apply-btn">Postuler</button>
+  </div>
+
+  <div *ngIf="!userId" class="login-message">
+    <p>Vous devez être connecté pour postuler.</p>
+    <a routerLink="/login" class="login-link">Se connecter</a>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="content-container">
+      <form (ngSubmit)="onSubmit(offreForm)" #offreForm="ngForm">
+
+      <div class="form-group">
+        <i class="fa fa-heading"></i>
+        <input type="text" name="titre" [(ngModel)]="offre.titre" placeholder="Titre de l'offre" required #titre="ngModel">
+        <div *ngIf="offreForm.submitted && !titre.valid" class="error">Le titre est requis</div>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-align-left"></i>
+        <textarea name="description" [(ngModel)]="offre.description" placeholder="Description" required #description="ngModel"></textarea>
+        <div *ngIf="offreForm.submitted && !description.valid" class="error">La description est requise</div>
+      </div>
+
+      <div class="form-group">
+        <p>Date d'expiration</p>
+        <input type="date" name="date_expiration" [(ngModel)]="offre.date_expiration" required #date_expiration="ngModel">
+        <div *ngIf="offreForm.submitted && !date_expiration.valid" class="error">La date d'expiration est requise</div>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-list"></i>
+        <select name="type_offre" [(ngModel)]="offre.type_offre" required #type_offre="ngModel">
+          <option value="" class="offre">Type d'offre</option>
+          <option value="stage">Stage</option>
+          <option value="emploi">Emploi</option>
+        </select>
+        <div *ngIf="offreForm.submitted && !type_offre.valid" class="error">Le type d'offre est requis</div>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-map-marker-alt"></i>
+        <input type="text" name="lieu" [(ngModel)]="offre.lieu" placeholder="Lieu" required #lieu="ngModel">
+        <div *ngIf="offreForm.submitted && !lieu.valid" class="error">Le lieu est requis</div>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-hourglass-half"></i>
+        <input type="text" name="duree" [(ngModel)]="offre.duree" placeholder="Durée" required #duree="ngModel">
+        <div *ngIf="offreForm.submitted && !duree.valid" class="error">La durée est requise</div>
+      </div>
+
+      <button type="submit"><i class="fa fa-plus-circle"></i>Ajouter l'offre</button>
+
+    </form>
+  </div>
+</div>

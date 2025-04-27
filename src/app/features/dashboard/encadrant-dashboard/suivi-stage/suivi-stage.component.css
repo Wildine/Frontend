@@ -1,0 +1,61 @@
+.suivi-stage-container {
+  padding: 20px 30px 90px 100px;
+}
+
+.header h2 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #343A40;
+}
+
+.header i {
+  margin-right: 10px;
+}
+
+.header p {
+  color: #6C757D;
+  margin-top: 5px;
+}
+
+.filter-bar {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-input, .progress-filter {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #CCCCCC;
+  min-width: 200px;
+}
+
+.suivi-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.suivi-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 20px;
+  border: 1px solid #E4E5E6;
+}
+
+.suivi-card h4 {
+  color: #343A40;
+  margin-bottom: 10px;
+}
+
+.suivi-card p {
+  color: #6C757D;
+  margin: 4px 0;
+}
+
+.suivi-card .btn {
+  margin-top: 10px;
+}

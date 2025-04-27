@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="content-container">
+    <div class="form-container">
+      <div class="img-container">
+        <div class="welcome">
+          <h2>Bienvenue dans votre espace Entreprise</h2>
+          <p>Vous êtes sur le point de créer un encadrant pour gérer vos projets et équipes. Merci de compléter le formulaire ci-dessous.</p>
+        </div>
+        <!-- <img src="assets/anime.png" alt=""> -->
+      </div>
+
+      <form (ngSubmit)="onSubmit()" #encadrantForm="ngForm">
+        <div class="form-group">
+          <h2>Ajouter un encadrant <i class="fa-solid fa-user-plus"></i></h2>
+          <div class="input">
+            <input type="text" placeholder="Prénom" name="prenom" [(ngModel)]="user.prenom" required>
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="input">
+            <input type="text" placeholder="Nom" name="nom" [(ngModel)]="user.nom" required>
+            <i class="fas fa-user-tag"></i>
+          </div>
+
+          <div class="input">
+            <input type="email" placeholder="Email" name="email" [(ngModel)]="user.email" required>
+            <i class="fas fa-envelope"></i>
+          </div>
+
+          <div class="input">
+            <input type="password" placeholder="Mot de passe" name="password" [(ngModel)]="user.password" required>
+            <i class="fas fa-lock"></i>
+          </div>
+
+          <div class="input">
+            <input type="password" placeholder="Confirmer le mot de passe" [(ngModel)]="user.confirmPassword" name="confirmPassword" required>
+            <i class="fas fa-lock"></i>
+          </div>
+
+          <div class="btn">
+            <button type="submit">Créer l'encadrant<i class="fa-solid fa-user-plus"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

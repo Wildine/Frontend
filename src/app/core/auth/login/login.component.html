@@ -1,7 +1,38 @@
 <div class="container">
-  <div class="form-container">
-    <form action="">
+  <div class="content-container">
+    <div class="form-container">
+      <div class="img-container">
+        <div class="welcome">
+          <h2>Content de vous revoir</h2>
+          <p>Connectez-vous pour accéder à nos services.</p>
+        </div>
+      </div>
 
-    </form>
+      <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+        <div class="form-group">
+          <h2>Se connecter<i class="fa-solid fa-right-to-bracket"></i></h2>
+
+          <div class="input">
+            <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" autofocus required>
+            <i class="fas fa-envelope"></i>
+          </div>
+
+          <div class="input">
+            <input type="password" placeholder="Mot de passe" [(ngModel)]="user.password" name="password" required>
+            <i class="fas fa-lock"></i>
+          </div>
+
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+
+
+          <div class="btn">
+            <button type="submit">Connexion<i class="fa-solid fa-right-to-bracket"></i></button>
+          </div>
+        </div>
+        <p class="login">Pas encore de compte ?<a routerLink="/register">Inscrivez-vous</a></p>
+      </form>
+    </div>
   </div>
 </div>

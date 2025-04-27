@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px 30px 90px 100px;
+}
+
+.container i {
+  padding-right: 10px;
+}
+
+.titre {
+  border-radius: 10px;
+  padding: 10px 50px 10px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.titre h2 {
+  font-size: 40px;
+  color: #343A40 ;
+}
+
+.titre p {
+  color: #555;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+swiper-slide {
+  padding-bottom: 30px;
+}
+
+.card {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  padding: 15px;
+  font-size: 20px;
+  color: #c0c8ca;
+  border-radius: 10px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+}
+
+.card-body {
+  padding: 15px;
+  color: #c0c8ca;
+}
+
+.card-body p {
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.quick-actions .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.quick-actions button {
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+border-radius: 8px;
+padding: 12px 24px;
+background: #007BFF;
+}
+
+.section {
+  padding: 24px;
+  margin-top: 32px;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  color: #343A40;
+  margin-bottom: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.entretien-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.entretien-table th, td {
+  border: 1px solid #ccc;
+}
+
+.entretien-table th, .entretien-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.interviews-list li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.alerts ul li {
+  list-style: none;
+  color: #dc3545;
+  margin-bottom: 8px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .quick-actions h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .quick-actions .actions {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 30px;
+  }
+
+  .titre h2 {
+    font-size: 30px;
+  }
+
+  swiper-container {
+    --swiper-navigation-size: 20px;
+    --swiper-pagination-bullet-size: 10px;
+  }
+}
+
+@media screen and (max-width: 796px) {
+  .quick-actions .actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quick-actions .actions {
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-header {
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 24px;
+  }
+
+  .actions h2 {
+    font-size: 24px;
+  }
+
+  .actions .btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .success-container {
+    padding: 30px 20px;
+  }
+
+  .success-message {
+    font-size: 19px;
+    padding: 15px;
+  }
+
+  .success-message i {
+    font-size: 24px;
+  }
+
+  .btn-back {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .titre h2 {
+    font-size: 24px;
+  }
+
+  .card-body p {
+    font-size: 20px;
+  }
+
+  .quick-actions h2 {
+    font-size: 20px;
+  }
+
+  .quick-actions .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .card-header {
+    font-size: 16px;
+  }
+}
+
+/*---------------------------------------------------------------
+.dashboard-container {
+  padding: 2rem;
+  background: #f8f9fa;
+  padding: 20px 30px 90px 100px;
+}
+
+h1 {
+  color: #00416A;
+  margin-bottom: 1.5rem;
+}
+
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+  border-left: 5px solid #007BFF;
+}
+
+.card h2 {
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+.quick-actions .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.quick-actions button {
+  background: #007BFF;
+  color: #FFF;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 2rem;
+  background: #FFF;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  color: #343A40;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.interviews-list li {
+  margin-bottom: 0.5rem;
+}
+
+.alerts ul li {
+  margin-bottom: 0.5rem;
+  color: #dc3545;
+} */

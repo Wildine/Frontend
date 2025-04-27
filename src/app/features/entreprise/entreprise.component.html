@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div class="top">
+  <app-searchbar></app-searchbar>
+</div>
+
+<div class="container">
+  <div *ngFor="let entreprise of entreprises" class="entreprise-card">
+    <div class="entreprise-header">
+      <img src="/assets/entreprise.png" alt="Logo" class="entreprise-logo">
+      <div class="entreprise-info">
+        <h3 class="entreprise-nom">{{ entreprise.nom_entreprise }}</h3>
+        <span class="entreprise-secteur">{{ entreprise.secteur }}</span>
+      </div>
+    </div>
+
+    <p class="entreprise-description">{{ entreprise.description }}</p>
+
+    <div class="entreprise-stats">
+      <span class="offres-count">{{ entreprise.nombreOffres }} offres publiées</span>
+    </div>
+
+    <div class="entreprise-actions">
+      <button class="btn btn-primary">Voir profil</button>
+      <button class="btn btn-secondary">Voir les offres</button>
+    </div>
+  </div>
+</div>
+
+<div class="entreprise" *ngIf="entreprises.length === 0">
+  <p>Aucune entreprise disponible actuellement.</p>
+</div>
+
+<app-footer></app-footer>

@@ -1,1 +1,22 @@
-<p>offre-detail works!</p>
+<div class="container">
+  <div class="content-container">
+    <div *ngIf="offre">
+      <h2><i class="fa fa-briefcase"></i>{{ offre.titre }}</h2>
+      <p><i class="fa fa-info-circle"></i><strong>Description:</strong>{{ offre.description }}</p>
+      <p><i class="fa fa-briefcase"></i><strong>Type d'offre:</strong>{{ offre.type_offre }}</p>
+      <p><i class="fa fa-map-marker-alt"></i><strong>Lieu:</strong>{{ offre.lieu }}</p>
+      <p><i class="fa fa-clock"></i><strong>Durée:</strong>{{ offre.duree }}</p>
+      <p><i class="fa fa-calendar-alt"></i><strong>Date d'Expiration:</strong>{{ offre.date_expiration | date }}</p>
+
+      <div *ngIf="!offre">
+        <p>Offre non trouvée</p>
+      </div>
+
+      <div class="btn">
+        <button (click)="postuler()" class="post"><i class="fa fa-paper-plane"></i>Postuler</button>
+        <button routerLink="/offres" class="back"><i class="fa fa-solid fa-arrow-left fa-lg"></i>Retour à la liste</button>
+      </div>
+    </div>
+
+  </div>
+</div>

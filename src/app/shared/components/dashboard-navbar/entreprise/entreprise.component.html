@@ -1,0 +1,100 @@
+<nav class="sidebar" #sidebar>
+  <div class="logo-menu">
+    <h2 class="logo">
+      <a routerLink="/entreprise-dashboard">
+        <span class="linkname" style="--i:1">Menu</span>
+      </a>
+    </h2>
+    <i class="fa fa-bars toggle-btn" #toggleBtn></i>
+  </div>
+
+  <div class="list">
+    <li class="list-item active">
+      <a routerLink="/entreprise-dashboard">
+        <i class="fa fa-tachometer-alt"></i>
+        <span class="linkname" style="--i:1">Tableau de bord</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/gestion-offre">
+        <i class="fa fa-briefcase"></i>
+        <span class="linkname" style="--i:2">Gestion des offres</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/candidatures">
+        <i class="fa fa-paper-plane"></i>
+        <span class="linkname" style="--i:3">Candidatures</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/encadrants">
+        <i class="fa fa-user-tie"></i>
+        <span class="linkname" style="--i:9">Encadrants</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/entretiens">
+        <i class="fa fa-user-check"></i>
+        <span class="linkname" style="--i:4">Entretiens</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/rapports">
+        <i class="fa fa-file-alt"></i>
+        <span class="linkname" style="--i:5">Rapports</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/recherche">
+        <i class="fa fa-search"></i>
+        <span class="linkname" style="--i:6">Recherche rapide</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/notifications">
+        <i class="fa fa-bell"></i>
+        <span class="linkname" style="--i:7">Notifications</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/entreprise-dashboard/profil">
+        <i class="fa fa-cogs"></i>
+        <span class="linkname" style="--i:8">Profil et paramètres</span>
+      </a>
+    </li>
+
+    <!-- <li class="list-item">
+      <a routerLink="/entreprise-dashboard">
+        <i class="fa fa-bars"></i>
+        <span class="linkname" style="--i:9">Menu latéral</span>
+      </a>
+    </li> -->
+
+    <li class="list-item">
+      <a routerLink="/home">
+        <i class="fa fa-home"></i>
+        <span class="linkname" style="--i:8">Retour à l'accueil</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a (click)="logout()" class="cursor">
+        <i class="fa fa-sign-out-alt"></i>
+        <span class="linkname" style="--i:10">Se déconnecter</span>
+      </a>
+    </li>
+  </div>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

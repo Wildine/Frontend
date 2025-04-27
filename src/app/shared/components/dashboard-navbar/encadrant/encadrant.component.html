@@ -1,0 +1,80 @@
+<nav class="sidebar" #sidebar>
+  <div class="logo-menu">
+    <h2 class="logo">Menu</h2>
+    <i class="fa fa-bars toggle-btn" #toggleBtn></i>
+  </div>
+
+  <div class="list">
+    <li class="list-item active">
+      <a routerLink="/encadrant-dashboard">
+        <i class="fa fa-tachometer-alt"></i>
+        <span class="linkname" style="--i:1">Tableau de bord</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/etudiant-encadres">
+        <i class="fa fa-users"></i>
+        <span class="linkname" style="--i:2">Étudiants encadrés</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/suivi-stage">
+        <i class="fa fa-route"></i>
+        <span class="linkname" style="--i:3">Suivi de stage</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/evaluations">
+        <i class="fa fa-check-circle"></i>
+        <span class="linkname" style="--i:4">Évaluations</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/documents">
+        <i class="fa fa-file-alt"></i>
+        <span class="linkname" style="--i:5">Documents</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/profil">
+        <i class="fa fa-user"></i>
+        <span class="linkname" style="--i:6">Profil</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/notifications">
+        <i class="fa fa-bell"></i>
+        <span class="linkname" style="--i:7">Notifications</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/encadrant-dashboard/help">
+        <i class="fa fa-life-ring"></i>
+        <span class="linkname" style="--i:8">Support / Aide</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a routerLink="/home">
+        <i class="fa fa-home"></i>
+        <span class="linkname" style="--i:8">Retour à l'accueil</span>
+      </a>
+    </li>
+
+    <li class="list-item">
+      <a (click)="logout()" class="cursor">
+        <i class="fa fa-sign-out-alt"></i>
+        <span class="linkname" style="--i:10">Se déconnecter</span>
+      </a>
+    </li>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="content-container">
+    <form (ngSubmit)="onSubmit()" #evaluationForm="ngForm">
+
+      <!-- Champ caché pour l'ID du stagiaire -->
+      <input
+        type="hidden"
+        name="stagiaireId"
+        [(ngModel)]="stagiaireId"
+        required
+        #stagiaireId="ngModel"
+      />
+
+      <!-- Nom du stagiaire en lecture seule -->
+      <div class="form-group">
+        <i class="fa fa-user"></i>
+        <input
+          type="text"
+          name="stagiaireNom"
+          [(ngModel)]="stagiaireNom"
+          placeholder="Nom du Stagiaire"
+        />
+      </div>
+
+      <input
+        type="hidden"
+        name="encadrantId"
+        [(ngModel)]="encadrantId"
+        required
+        #encadrantId="ngModel"
+      />
+
+      <!-- Note -->
+      <div class="form-group">
+        <i class="fa fa-star"></i>
+        <input
+          type="number"
+          name="note"
+          [(ngModel)]="note"
+          placeholder="Note (0-20)"
+          required
+          min="0"
+          max="20"
+          #note="ngModel"
+        />
+        <div *ngIf="evaluationForm.submitted && !note.valid" class="error">La note est requise (0-20)</div>
+      </div>
+
+      <!-- Commentaire -->
+      <div class="form-group">
+        <i class="fa fa-comment"></i>
+        <textarea
+          name="commentaire"
+          [(ngModel)]="commentaire"
+          placeholder="Commentaire"
+          required
+          #commentaire="ngModel"
+        ></textarea>
+        <div *ngIf="evaluationForm.submitted && !commentaire.valid" class="error">Le commentaire est requis</div>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <button type="submit">
+        <i class="fa fa-paper-plane"></i>Soumettre l'évaluation
+      </button>
+
+    </form>
+  </div>
+</div>

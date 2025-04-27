@@ -1,4 +1,11 @@
-<hr>
 <div class="searchbar">
-  <input type="search" placeholder="Recherchez une emploi, entreprise, faire un stage..."><button><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    placeholder="Recherchez une opportunité, un stage ou une entreprise..."
+    class="search-input"
+    name="search"
+    (keydown.enter)="onSearch()"
+  />
+  <button class="search-btn" (click)="onSearch()">Rechercher</button>
 </div>

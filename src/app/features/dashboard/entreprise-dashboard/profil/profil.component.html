@@ -1,0 +1,63 @@
+<!-- Fichier: profil-parametres-dashboard.component.html -->
+<div class="profil-parametres-container">
+  <div class="titre">
+    <h2>
+      <i class="fa-solid fa-user" style="color:#343A40;"></i> Profil et Paramètres
+    </h2>
+    <p>Gérez vos informations personnelles et vos paramètres de compte.</p>
+  </div>
+
+  <div class="profil-container">
+    <div class="profil-card">
+      <div class="profil-header">
+        <h3>Informations du Profil</h3>
+      </div>
+      <div class="profil-body">
+        <form>
+          <div class="form-group">
+            <label for="companyName">Nom de l'entreprise</label>
+            <input type="text" id="companyName" class="form-control" value="Nom de l'entreprise" readonly />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email de contact</label>
+            <input type="email" id="contactEmail" class="form-control" value="contact@entreprise.com" />
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Numéro de téléphone</label>
+            <input type="tel" id="contactPhone" class="form-control" value="01 23 45 67 89" />
+          </div>
+          <button class="btn btn-primary">Mettre à jour</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="parametres-container">
+    <div class="parametres-card">
+      <div class="parametres-header">
+        <h3>Paramètres du Compte</h3>
+      </div>
+      <div class="parametres-body">
+        <form>
+          <div class="form-group">
+            <label for="password">Mot de passe actuel</label>
+            <input type="password" id="password" class="form-control" placeholder="********" />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Nouveau mot de passe</label>
+            <input type="password" id="newPassword" class="form-control" placeholder="********" />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmer le nouveau mot de passe</label>
+            <input type="password" id="confirmPassword" class="form-control" placeholder="********" />
+          </div>
+          <button class="btn btn-success">Changer le mot de passe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="deconnexion-container">
+    <button class="btn btn-danger">Se déconnecter</button>
+  </div>
+</div>

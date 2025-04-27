@@ -1,18 +1,65 @@
 <header>
   <a routerLink="/home" class="logo">Logo</a>
   <nav>
-    <ul class="links">
+    <ul class="links" [class.active]="isMenuOpen">
       <li><a routerLink="/home">Accueil<i class="fa-solid fa-house"></i></a></li>
-      <li><a routerLink="/offres">Offres d'emploi<i class="fa-solid fa-tags"></i></a></li>
-      <li><a routerLink="/stages">Stages<i class="fa-solid fa-briefcase"></i></a></li> <!-- Changé "tags" en "briefcase" pour mieux représenter les stages -->
+
       <li class="dropdown">
-        <a routerLink="/compte">Compte<i class="fa-solid fa-user"></i></a>
+        <a routerLink="/offres">Offres<i class="fa-solid fa-clipboard-list"></i></a>
+        <ul *ngIf="!user" class="dropdown-content-offres">
+          <li><a routerLink="/stages">Stage<i class="fa-solid fa-graduation-cap"></i></a></li>
+          <li><a routerLink="/emplois">Emploi<i class="fa-solid fa-briefcase"></i></a></li>
+        </ul>
+      </li>
+
+      <li><a routerLink="/entreprises">Entreprises<i class="fa-solid fa-building"></i></a></li>
+
+      <li *ngIf="!user" class="dropdown">
+        <a routerLink="/auth">Compte<i class="fa-solid fa-user"></i></a>
         <ul class="dropdown-content">
           <li><a routerLink="/register">S'inscrire<i class="fa-solid fa-user-plus"></i></a></li>
           <li><a routerLink="/login">Connexion<i class="fa-solid fa-right-to-bracket"></i></a></li>
         </ul>
       </li>
+
+      <li *ngIf="user" class="dropdown">
+        <a>
+          {{ user.prenom ? user.prenom + ' ' + user.nom : user.nom }}<i class="fa-solid fa-user"></i>
+          <!-- {{ user.prenom ? user.prenom + ' ' + user.nom : user.nom }}<i class="fa-solid fa-user"></i> -->
+        </a>
+        <ul class="dropdown-content">
+          <li *ngIf="user.role === 'etudiant'">
+            <a routerLink="/etudiant-dashboard">
+              Tableau étudiant<i class="fa-solid fa-user-graduate" style="color:#007BFF;"></i>
+            </a>
+          </li>
+          <li *ngIf="user.role === 'entreprise'">
+            <a routerLink="/entreprise-dashboard">
+              Tableau entreprise<i class="fa-solid fa-building" style="color:#6610F2;"></i>
+            </a>
+          </li>
+          <li *ngIf="user.role === 'encadrant'">
+            <a routerLink="/encadrant-dashboard">
+              Tableau encadrant<i class="fa-solid fa-chalkboard-user" style="color:#17A2B8;"></i>
+            </a>
+          </li>
+          <li *ngIf="user.role === 'demande_emploi'">
+            <a routerLink="/chercheur-dashboard">
+              Tableau chercheur<i class="fa-solid fa-briefcase" style="color:#6C757D;"></i>
+            </a>
+          </li>
+          <li>
+            <a (click)="logout()" class="logout">
+              Déconnexion<i class="fa-solid fa-right-from-bracket" style="color:#DC3545;"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+
       <li><a routerLink="/contact">Contact<i class="fa-solid fa-envelope"></i></a></li>
     </ul>
+
+    <!-- Icône de menu hamburger pour mobile -->
+    <i class="fa-solid fa-bars menu-toggle" (click)="toggleMenu()"></i>
   </nav>
 </header>

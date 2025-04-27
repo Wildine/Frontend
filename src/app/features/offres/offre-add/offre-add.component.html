@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="content-container">
+    <form (ngSubmit)="onSubmit()" #offreForm="ngForm">
+
+      <div class="form-group">
+        <i class="fa fa-heading"></i>
+        <input type="text" [(ngModel)]="offre.titre" name="titre" placeholder="Titre de l'offre" required>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-align-left"></i>
+        <textarea [(ngModel)]="offre.description" name="description" placeholder="Description" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <p><i class="fa fa-calendar-alt"></i> Date d'expiration</p>
+        <input type="date" [(ngModel)]="offre.date_expiration" name="date_expiration" required>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-list"></i>
+        <select [(ngModel)]="offre.type_offre" name="type_offre" required>
+          <option value="" class="offre">Type d'offre</option>
+          <option value="stage">Stage</option>
+          <option value="emploi">Emploi</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-map-marker-alt"></i>
+        <input type="text" [(ngModel)]="offre.lieu" name="lieu" placeholder="Lieu" required>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-hourglass-half"></i>
+        <input type="text" [(ngModel)]="offre.duree" name="duree" placeholder="Durée" required>
+      </div>
+
+      <button type="submit" [disabled]="!offreForm.valid"><i class="fa fa-plus-circle"></i>Ajouter l'offre</button>
+
+    </form>
+  </div>
+</div>

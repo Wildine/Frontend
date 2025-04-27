@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="content-container">
+    <div class="form-container">
+      <div class="img-container">
+        <div class="welcome">
+          <h2>Planifier un entretien</h2>
+          <p>Vous êtes sur le point de planifier un entretien pour un candidat. Merci de compléter le formulaire ci-dessous.</p>
+        </div>
+      </div>
+
+      <form (ngSubmit)="planifierEntretien()" #entretienForm="ngForm">
+        <div class="form-group">
+          <h2><i class="fa-solid fa-calendar-plus"></i> Planifier un entretien</h2>
+
+          <div class="input">
+            <label>Date de l'entretien :</label>
+            <input type="datetime-local" placeholder="Date de l'entretien" name="date_entretien" [(ngModel)]="entretien.date_entretien" required>
+          </div>
+
+          <div class="input">
+              <label>Candidat :</label>
+            <select name="candidature_id" [(ngModel)]="entretien.candidature_id" required>
+              <option *ngFor="let candidature of candidatures" [value]="candidature.id">
+                {{ candidature.User.Etudiant.prenom }} {{ candidature.User.Etudiant.nom }}
+              </option>
+            </select>
+          </div>
+
+          <div class="input">
+            <label>Mode :</label>
+            <select name="mode" [(ngModel)]="entretien.mode" required>
+              <option value="presentiel">Présentiel</option>
+              <option value="visio">Visio</option>
+              <option value="telephone">Téléphone</option>
+            </select>
+          </div>
+
+          <div class="input">
+            <label>Lien ou Lieu :</label>
+            <input type="text" placeholder="Lien ou lieu de l'entretien" name="lien_ou_lieu" [(ngModel)]="entretien.lien_ou_lieu" required>
+            <!-- <i class="fas fa-location-arrow"></i> -->
+          </div>
+
+          <div class="input">
+            <label>Message :</label>
+            <textarea placeholder="Message optionnel" name="message" [(ngModel)]="entretien.message"></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+
+          <div class="btn">
+            <button type="submit">Planifier l'entretien<i class="fa-solid fa-calendar-plus"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h3>Entretiens planifiés</h3>
+<ul>
+  <li *ngFor="let entretien of entretiens">
+    Candidature #{{ entretien.candidature_id }} – {{ entretien.date_entretien }} - {{ entretien.heure_entretien }} - {{ entretien.mode }} - {{ entretien.lien_ou_lieu }}
+  </li>
+</ul>

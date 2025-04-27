@@ -1,0 +1,142 @@
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top {
+  padding: 90px 300px 0 300px;
+  background-color: #00416A;
+}
+
+.entreprise-card {
+  width: 100%;
+  margin: 30px;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.entreprise-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.entreprise-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.entreprise-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.entreprise-secteur {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.entreprise-description {
+  color: #555;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.entreprise-stats {
+  font-size: 14px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.entreprise-stats .offres-count {
+  padding: 10px;
+  font-size: 18px;
+  /* border: 1px solid #000; */
+}
+
+.entreprise-actions .btn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.entreprise {
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    gap: 40px;
+    display: grid;
+  padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .entreprise-card {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    padding: 90px 0 0 0;
+    /* padding: 90px 300px 0 300px; */
+    background-color: #00416A;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .entreprise-actions .btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .entreprise-card {
+    padding: 15px;
+  }
+
+  .entreprise-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entreprise-logo {
+    margin-bottom: 10px;
+  }
+}

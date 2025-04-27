@@ -1,0 +1,91 @@
+.container {
+  padding: 20px 30px 90px 100px;
+}
+
+.header {
+  background-color: #F8F9FA;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+  color: #343A40;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header p {
+  color: #6C757D;
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+.btn.btn-primary {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.entretien-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.entretien-table th, td {
+  border: 1px solid #ccc;
+}
+
+.entretien-table th, .entretien-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.badge {
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.badge.planned {
+  background-color: #17A2B8;
+}
+
+.badge.done {
+  background-color: #28A745;
+}
+
+
+.btn.btn-secondary {
+  cursor: pointer;
+  margin-right: 5px;
+  color: #007BFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #007BFF;
+  background-color: #FFFFFF;
+}
+
+.btn.btn-danger {
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #DC3545;
+}

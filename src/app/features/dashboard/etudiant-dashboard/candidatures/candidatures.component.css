@@ -1,0 +1,130 @@
+.candidatures-etudiant-container {
+  padding: 20px 30px 90px 100px;
+}
+
+.header h2 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #343A40;
+}
+
+.header i {
+  margin-right: 10px;
+}
+
+.header p {
+  color: #6C757D;
+  margin-top: 5px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+  align-items: center;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 8px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+.candidatures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.candidature-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-left: 5px solid #007BFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.candidature-card h4 {
+  color: #00416A;
+  margin-bottom: 5px;
+}
+
+.candidature-card p {
+  margin: 3px 0;
+  color: #6C757D;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.status.envoyee {
+  background-color: #E4E5E6;
+  color: #343A40;
+}
+
+.status.acceptee {
+  background-color: #28A745;
+  color: #FFFFFF;
+}
+
+.status.refusee {
+  background-color: #DC3545;
+  color: #FFFFFF;
+}
+
+.btn.btn-primary {
+  background-color: #007BFF;
+  color: #FFFFFF;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar select,
+  .filter-bar input,
+  .filter-bar button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .header h2 {
+    font-size: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-bar {
+    gap: 10px;
+  }
+
+  .candidature-card {
+    padding: 15px;
+  }
+
+  .status {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

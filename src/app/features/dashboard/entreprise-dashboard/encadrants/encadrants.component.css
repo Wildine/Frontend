@@ -1,0 +1,145 @@
+.encadrants-container {
+  background: #f8f9fa;
+  padding: 20px 30px 90px 100px;
+}
+
+.encadrants-container h2 {
+  color: #00416a;
+  margin-bottom: 15px;
+}
+
+.actions-bar {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.search-box {
+  width: 250px;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-box:focus {
+  border: 1px solid #007bff;
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 5px;
+  background: #007bff;
+}
+
+.encadrants-table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.encadrants-table th, .encadrants-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.statut.actif {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.statut.inactif {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.btn-sm {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background: #6c757d;
+}
+
+.btn-sm.danger {
+  background: #dc3545;
+}
+
+/* Responsive */
+@media screen and (max-width: 934px) {
+  .actions-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .encadrants-table th, .encadrants-table td {
+    padding: 8px;
+  }
+
+  .encadrants-table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    position: relative;
+  }
+
+  .encadrants-table td::before {
+    /* content: attr(data-label); */
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+  }
+
+  .encadrants-table td .btn-sm {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .encadrants-table thead {
+    display: none;
+  }
+
+  .encadrants-table tr {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .encadrants-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px 14px;
+  }
+
+  .btn-sm {
+    padding: 8px 10px;
+  }
+}

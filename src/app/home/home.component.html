@@ -1,84 +1,81 @@
 <app-navbar></app-navbar>
-<app-searchbar></app-searchbar>
+
 <main>
-  <section class="main">
-    <div class="container">
-      <div class="content-text">
-        <h2>Stage & Emploi Étudiants : Votre Passerelle vers l'Avenir Professionnel</h2>
-        <p>Notre plateforme simplifie la recherche de stages et d'emplois pour les étudiants, en connectant talents et entreprises. Publiez des offres, postulez en quelques clics, suivez vos candidatures, gérez les entretiens et les conventions de stage, et évaluez les performances tout en un seul endroit.</p>
-        <!-- <p>Une plateforme complète pour les étudiants et les entreprises : offres, candidatures, entretiens, conventions et évaluations, tout est centralisé.</p> -->
-        <button type="button"><a routerLink="/offers">Voir les offres</a><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-      <div class="img">
-        <img src="job.png" alt="">
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Préparez votre avenir professionnel dès aujourd'hui.</h1>
+      <p>Accédez à des stages, des offres d’emploi et entrez en relation avec des entreprises partenaires.</p>
+
+      <div class="searchbar-wrapper">
+        <app-searchbar></app-searchbar>
       </div>
     </div>
   </section>
 
-  <app-job-list></app-job-list>
-
-  <section id="objectif">
+  <app-offre-list></app-offre-list>
+  <!-- <section id="objectif">
       <h2 class="h2">Pourquoi nous choisir ?</h2>
       <div class="objectif-container">
-      <swiper-container
-      navigation="true"
-      pagination="true"
-      pagination-clickable="true"
-      slides-per-view="4"
-      speed="500"
-      autoplay-delay="2500"
-      >
-      <swiper-slide>
-        <div class="card">
-          <h2> Offres Vérifiées <i class="fa-solid fa-check"></i></h2>
-          <p>Nous vérifions chaque offre pour vous garantir des opportunités sérieuses et adaptées à vos compétences</p>
-        </div>
-      </swiper-slide>
 
-      <swiper-slide>
-        <div class="card">
-          <h2>Processus Simplifié <i class="fa-solid fa-rocket"></i></h2>
-          <p>Postulez en quelques clics et suivez vos candidatures en temps réel, sans complications.</p>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide>
-        <div class="card">
-          <h2>Support 24/7 <i class="fa-solid fa-headset"></i></h2>
-          <p>Notre équipe est disponible 24h/24 et 7j/7 pour répondre à vos questions et vous accompagner.</p>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide>
-        <div class="card">
-          <h2>Large Choix d'Offres <i class="fa-solid fa-folder-open"></i></h2>
-          <p>Accédez à des milliers d'offres de stage et d'emploi dans tous les domaines et toutes les régions.</p>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide>
-        <div class="card">
-          <h2>Tableau de Bord Personnalisé <i class="fa-solid fa-chart-line"></i></h2>
-          <p>Suivez l'état de vos candidatures et organisez vos recherches grâce à un tableau de bord intuitif.</p>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide>
-        <div class="card">
-          <h2>Conseils et Ressources <i class="fa-solid fa-book-open"></i></h2>
-          <p>Bénéficiez de conseils pratiques, de modèles de CV et de lettres de motivation pour maximiser vos chances.</p>
-        </div>
-      </swiper-slide>
-
-      <swiper-slide>
-        <div class="card">
-          <h2>Sécurité des Données <i class="fa-solid fa-shield-halved"></i></h2>
-          <p>Vos données personnelles sont protégées et confidentielles, conformément aux normes les plus strictes.</p>
-        </div>
+        <swiper-container
+        navigation="true"
+        pagination="true"
+        pagination-clickable="true"
+        slides-per-view="4"
+        speed="500"
+        autoplay-delay="2500"
+        >
+        <swiper-slide>
+          <div class="card">
+            <h2> Offres Vérifiées <i class="fa-solid fa-check"></i></h2>
+            <p>Nous vérifions chaque offre pour vous garantir des opportunités sérieuses et adaptées à vos compétences</p>
+          </div>
         </swiper-slide>
-      </swiper-container>
+
+        <swiper-slide>
+          <div class="card">
+            <h2>Processus Simplifié <i class="fa-solid fa-rocket"></i></h2>
+            <p>Postulez en quelques clics et suivez vos candidatures en temps réel, sans complications.</p>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="card">
+            <h2>Support 24/7 <i class="fa-solid fa-headset"></i></h2>
+            <p>Notre équipe est disponible 24h/24 et 7j/7 pour répondre à vos questions et vous accompagner.</p>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="card">
+            <h2>Large Choix d'Offres <i class="fa-solid fa-folder-open"></i></h2>
+            <p>Accédez à des milliers d'offres de stage et d'emploi dans tous les domaines et toutes les régions.</p>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="card">
+            <h2>Tableau de Bord Personnalisé <i class="fa-solid fa-chart-line"></i></h2>
+            <p>Suivez l'état de vos candidatures et organisez vos recherches grâce à un tableau de bord intuitif.</p>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="card">
+            <h2>Conseils et Ressources <i class="fa-solid fa-book-open"></i></h2>
+            <p>Bénéficiez de conseils pratiques, de modèles de CV et de lettres de motivation pour maximiser vos chances.</p>
+          </div>
+        </swiper-slide>
+
+        <swiper-slide>
+          <div class="card">
+            <h2>Sécurité des Données <i class="fa-solid fa-shield-halved"></i></h2>
+            <p>Vos données personnelles sont protégées et confidentielles, conformément aux normes les plus strictes.</p>
+          </div>
+          </swiper-slide>
+        </swiper-container>
       </div>
-  </section>
+  </section> -->
 </main>
 
 <app-footer></app-footer>

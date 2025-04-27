@@ -1,0 +1,112 @@
+.profil-parametres-container {
+  padding: 20px 30px 90px 100px;
+}
+
+.profil-parametres-container h2 {
+  display: flex;
+  align-items: center;
+}
+
+.profil-parametres-container i {
+  padding-right: 10px;
+}
+
+.profil-container, .parametres-container {
+  margin-top: 30px;
+}
+
+.profil-card, .parametres-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.profil-card:hover, .parametres-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profil-header, .parametres-header {
+  background-color: #00416A;
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.profil-header h3, .parametres-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.profil-body, .parametres-body {
+  padding: 20px;
+  color: #343A40;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343A40;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.form-group input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28A745;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #DC3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.deconnexion-container {
+  text-align: center;
+  margin-top: 30px;
+}
